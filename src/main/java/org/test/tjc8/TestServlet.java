@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
-//import org.test.tjc.model.TestEntity;
+import org.test.tjc8.model.TestEntity;
 
 @WebServlet( urlPatterns = {"/index.html"} )
 public class TestServlet extends HttpServlet {
@@ -49,9 +49,9 @@ public class TestServlet extends HttpServlet {
 				
 				out.println("connection url from entity manager\n"+con.getMetaData().getURL()+"\n");
 				
-				//TestEntity testEntity = em.find(TestEntity.class, 1);
+				TestEntity testEntity = em.find(TestEntity.class, 1);
 				
-				//out.println(testEntity);
+				out.println(testEntity);
 				
 				em.getTransaction().commit();
 			} catch (Exception e) {
