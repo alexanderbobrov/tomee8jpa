@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.test</groupId>
-	<artifactId>tjc</artifactId>
-	<version>2.0</version>
+	<artifactId>tjc8</artifactId>
+	<version>3.0</version>
 	<packaging>war</packaging>
 
-	<name>tomee jpa check</name>
+	<name>tomee 8 jpa check</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,12 +36,12 @@
 
 	<dependencies>
 
-<dependency>
-    <groupId>org.apache.tomee</groupId>
-    <artifactId>javaee-api</artifactId>
-    <version>8.0-5</version>
-    <scope>provided</scope>
-</dependency>
+		<dependency>
+			<groupId>org.apache.tomee</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0-5</version>
+			<scope>provided</scope>
+		</dependency>
 
 
 		<dependency>
@@ -61,16 +61,14 @@
 	</dependencies>
 
 	<build>
-		<finalName>tomeejpacheck</finalName>
+		<finalName>tomee8jpacheck</finalName>
 		<defaultGoal>install</defaultGoal>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
+		<pluginManagement>
 			<plugins>
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.1.0</version>
 				</plugin>
-				<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
 				<plugin>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>3.2.0</version>
@@ -101,11 +99,11 @@
 					<version>3.0.0</version>
 				</plugin>
 				<plugin>
-					<groupId>org.apache.openejb.maven</groupId>
+					<groupId>org.apache.tomee.maven</groupId>
 					<artifactId>tomee-maven-plugin</artifactId>
-					<version>9.0.0-M7</version>
+					<version>8.0.8-SNAPSHOT</version>
 					<configuration>
-						<tomeeVersion>9.0.0-M7</tomeeVersion>
+						<tomeeVersion>8.0.8-SNAPSHOT</tomeeVersion>
 						<tomeeClassifier>plume</tomeeClassifier>
 					</configuration>
 				</plugin>
